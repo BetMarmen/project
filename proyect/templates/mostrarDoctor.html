@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+{% block content %}
+<div class="py-16 bg-blue-200">
+  <div class="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
+      <div class="flex justify-center">
+          <div class="bg-white rounded-xl shadow-xl p-8">
+              <div class="mb-12 text-center">
+                  <img src="{{ doctor['foto'] }}" class="w-40 h-40 rounded-full border border-black mx-auto mb-4" alt="perfil">
+                  <h3 class="text-2xl font-medium text-black-900">{{ doctor['nombre'] }}</h3>
+                  <p class="mb-6">
+                      <span class="text-lg font-medium text-purple-600">Especialidad:</span>
+                      <span class="text-base text-black-500">{{ doctor['especialidad'] }}</span>
+                  </p>
+                  <p class="mb-6">
+                    <span class="text-lg font-medium text-purple-600">Disponibilidad:</span>
+                    <span class="text-base text-black-500">{{ doctor['disponibilidad'] }}</span>
+                  </p>
+                <p class="mb-6">
+                    <span class="text-lg font-medium text-purple-600">Correo:</span>
+                    <span class="text-base text-black-500">{{ doctor['correo'] }}</span>
+                </p>
+                <p class="mb-6">
+                    <span class="text-lg font-medium text-purple-600">Número:</span>
+                    <span class="text-base text-black-500">{{ doctor['número'] }}</span>
+                </p>
+                <h3 class="text-lg font-medium text-purple-600">Experiencia:
+
+                </h3>
+                <p class="text-base text-black-500 text-justify">{{ doctor['experiencia'] }}</p>
+                <p class="mb-6">
+                    <span class="text-lg font-medium text-purple-600">Estado:</span>
+                    <span class="text-base text-black-500">{{ doctor['estado'] }}</span>
+                
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+  {% endblock %}

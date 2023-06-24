@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+<body style="background-color: #9BE4FF;">
+    <form action="/register" method="post">
+        <section class="bg-white-50 light:bg-white-900">
+            <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 light:text-gray">
+            </a>
+            <div
+            class="contenedor w-full bg-blue rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-white-800 dark:border-gray-700 " style="background-color:white; border-color:white;">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1
+                class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-black">
+                Crea una cuenta
+            </h1>
+            <form class="space-y-4 md:space-y-6" action="#">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Usuario</label>
+                    <input type="text" name="usuario" id="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Nombre de usuario" required="">
+                            </div>
+                            <div>
+                            <label for="password"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Contraseña</label>
+                            <input type="password" name="contraseña" id="password" placeholder="••••••••"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required="">
+                            </div>
+                            <div>
+                                <label for="confirm-password"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Confirmar contraseña</label>
+                                <input type="password" name="confirmacion" id="confirm-password"
+                                placeholder="••••••••"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required="">
+
+                            </div>
+                            <div>
+                                <label for = "role"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Rol</label>
+                                <select name="role" id="role">
+                                    <option value="1">Doctor</option>
+                                    <option value="0">Paciente</option>
+                                </select>
+                            </div>
+
+                                <center>
+                                    <button type="submit" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                                        Registrar
+
+                                    </button>
+
+                                    <button type="submit"
+                                    class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"></button>
+                                        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                                            ¿ya tienes una cuenta? <a href="/login"
+                                            class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login
+                                        </a>
+                                    </p>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+        </form>
+    </div>
+</div>
+</div>
+</section>
+</form>
+{% endblock %}
+</body>

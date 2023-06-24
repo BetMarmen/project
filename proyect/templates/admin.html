@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Admin
+{% endblock %}
+
+{% block content %}
+<form action="/admin" method="POST">
+
+  <input type="text" name="nombre" placeholder="Doctor" />
+  <input type="text" name="especialidad" placeholder="Especialidad"/>
+  <input type="text" name="disponibilidad" placeholder="Disponibilidad"/>
+  <input type="text" name="numero" placeholder="Numero"/>
+  <input type="text" name="correo" placeholder="Correo"/>
+  <select name="estado">
+    <option value="1">Activo</option>
+    <option value="0">Inactivo</option>
+  </select>
+  <input type="text" name="foto" placeholder="Ingresa el url de la imagen"/>
+
+  <button type="submit" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+    Registrar
+
+</button>
+
+</form>
+
+{% endblock %}

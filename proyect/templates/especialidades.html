@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Especialidades
+{% endblock %}
+
+{% block content %}
+<!-- component -->
+<!-- component -->
+<div class="py-16 bg-purple-200">
+    <div class="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
+        <div class="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-3">
+            {% for doctor in doctores %}
+            <div class="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+                <div class="mb-12 space-y-4">
+                    <h3 class="text-2xl font-semibold text-purple-900"> {{ doctor["nombre"] }} </h3>
+                    <p class="mb-6">Especialidad {{ doctor["especialidad"] }}</p>
+                    <p class="mb-6">Disponibilidad: {{ doctor["disponibilidad"] }}</p>
+                    <p class="mb-6">estado: {{ doctor["estado"] }}</p>
+
+                    <a href="https://api.whatsapp.com/send?phone={{ doctor['número'] }}"
+                        class="block font-medium text-purple-600">Chatear </a>
+                    <a href="/doctor/{{ doctor['doctor_id'] }}" class="block font-medium text-purple-600">Expandir </a>
+                </div>
+                <img src="{{ doctor['foto'] }}" class="w-2/3 ml-auto -mb-12" alt="illustration" loading="lazy"
+                    width="800" height="600">
+            </div>
+            {% endfor %}
+            <!---
+            <div class="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+                <div class="mb-12 space-y-4">
+                    <h3 class="text-2xl font-semibold text-purple-900">Doc.Jose Martinez</h3>
+                    <p class="mb-6">Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.</p>
+                    <a href="/doctores" class="block font-medium text-purple-600">Contacto</a>
+                </div>
+                <img src="https://st.depositphotos.com/1518767/4293/i/600/depositphotos_42930187-stock-photo-smiling-male-doctor-with-arms.jpg" class="w-2/3 ml-auto" alt="illustration" loading="lazy" width="900" height="600">
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+                <div class="mb-12 space-y-4">
+                    <h3 class="text-2xl font-semibold text-purple-900">Doc.Letty Medina</h3>
+                    <p class="mb-6">Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.</p>
+                    <a href="/doctores" class="block font-medium text-purple-600">Contacto</a>
+                </div>
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20230220/pngtree-female-doctor-showing-something-portrait-of-happy-smiling-young-female-doctor-image_1643109.jpg" class="w-2/3 ml-auto " alt="illustration" loading="lazy" width="900" height="600">
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+                <div class="mb-12 space-y-4">
+                    <h3 class="text-2xl font-semibold text-purple-900">Doc. Pedro Lopez </h3>
+                    <p class="mb-6">Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.</p>
+                    <a href="/doctores" class="block font-medium text-purple-600">Contacto</a>
+                </div>
+                <img src="https://cdn.euroinnova.edu.es/img/subidasEditor/doctor-5871743_640-1610073541.webp" class="w-2/3 ml-auto -mb-12" alt="illustration" loading="lazy" width="900" height="600">
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+                <div class="mb-12 space-y-4">
+                    <h3 class="text-2xl font-semibold text-purple-900">Doc.Alexander Vega </h3>
+                    <p class="mb-6">Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.</p>
+                    <a href="/doctores" class="block font-medium text-purple-600">Contacto</a>
+                </div>
+                <img src="https://st1.uvnimg.com/dims4/default/08aa9c4/2147483647/thumbnail/480x270/quality/75/?url=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fbtg%2Fcuriosidades.batanga.com%2Ffiles%2F6-cosas-que-ningun-doctor-puede-hacerte-3.jpg" class="w-2/3 ml-auto -mb-12" alt="illustration" loading="lazy" width="900" height="600">
+            </div>
+            -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}
